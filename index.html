@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Feliz 1 Ano de Namoro Amor</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+	
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">##</span><br/>
+			<span class="comments"># Oi meu amor, tudo bem com você?</span><br/>
+			<span class="comments"># Bom, mais uma vez te trouxe uma coisa inusitada porque é isso que eu sei fazer kkkkk.</span><br/>
+			<span class="comments">##</span><br/>
+			Dia 27/12/22(<span class="string">"Onde tudo começou"</span>);<br/>
+			(<span class="string">"Foram dias e dias vivendo e amando você."</span>);<br/>
+			<span class="comments"># Sempre aprendendo mais sobre o amor, com a pessoa que exala o amor da maneira mais linda possível, sim, você!</span><br/>
+			Nossa História de amor é algo incrível.<br/>
+			<span class="comments"># Isso é apenas metade do que eu posso fazer por você.</span><br/>
+			"Eu te confesso"<br/>
+			<span class="comments"># Te reconquistar, foi a melhor coisa que aconteceu na minha vida nos últimos anos .</span><br/>
+			"Porque"<br/>
+			<span class="comments"># Desde que voltamos à ser o que eramos, eu me tornei um homem melhor.</span><br/>
+			"O brilho nos meus olhos dizem bastante"<br/>
+			<span class="comments"># Você me ensinou a ser homem, mesmo sem saber.</span><br/>
+			#Eu te amo<br/>
+			<span class="comments"># Eu te prometo, ser o marido que você sempre sonhou, como aqueles encantados dos filmes da Disney.</span><br/>
+			Imagina nossa filha vestida de rapunzel na festinha de 1 ano?<br/>
+			<span class="comments"># Prometo ser o melhor pai que um filho possa ter.</span><br/>
+			Eu te juro, ser o homem que vai sempre te proteger.<br/>
+			<span class="comments"># Muitas pessoas dizem que a paixão vai se acabando conforme o tempo, porém, eu me sinto mais apaixonado do que nunca por você.</span><br/>
+			#Eu e você<br/>
+			<span class="comments"># Somo feitos um para o outro, assim como nos contos de fadas, sabe? kkkkkkkk adoro.</span><br/>
+			Eu sou o que sou, porque eu te amo.<span class="keyword"></span>)<br/>
+			<span class="comments">Obrigado por fazer parte da minha vida, você é e sempre vai ser a minha luz.</span><br/>
+			<br/>
+			<span class="comments"># Vejo enfim a luz brilhar com você ao meu lado</span><br/>
+			<span class="comments"># </span><br/>
+			<span class="keyword"></span>:<br/>
+			<span class="placeholder"></span><span class="keyword">Eu</span> prometo ser fiel<br/>
+			<span class="placeholder"></span><span class="placeholder"></span>Te amar e te respeitar<br/>
+			<span class="comments"># E fazer com que você seja a mulher mais feliz do mundo!.</span><br/>
+			Como diria "Flynn Rider" ou nosso querido "Luciano Huck da Disney"... “Ela foi uma princesa pela qual valeu a pena esperar.”  <br/>
+			A vida é muito mais feliz quando eu te tenho ao meu lado.<br/>
+			<span class="comments"># Eu te vivo para sempre!.</span><br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Amor, aqui está o tempo no qual eu vou te amar!
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Te amo para sempre.<br/>
+					<div class="signature">- De: Encantado | Rapunzel</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+	together.setFullYear(2018, 10, 5);
+	together.setHours(15);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+	<audio controls autoplay src="music/360ytmp3.com_320kbps-vejo-enfim-a-luz-brilhar-com-letra-enrolados.mp3"></audio>
+</body>
+</html>
